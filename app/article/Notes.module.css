@@ -1,0 +1,11 @@
+a.link {
+  font-size: 1rem;
+  color: var(--color-white);
+  text-transform: none;
+  letter-spacing: 0;
+
+}
+
+a.link:hover {
+  text-decoration: underline;
+}

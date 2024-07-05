@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Header from "@/components/Header";
 
 const Geist = localFont({
   src: "../public/fonts/GeistVariableVF.woff2",
@@ -32,15 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${Geist.variable} ${GeistMono.variable}`}>
-      <body className="max-w-4xl mx-auto mt-10">
-        <Image
-          unoptimized
-          src="/logo.svg"
-          alt="A svg image of jamil khan"
-          width={200}
-          height={200}
-        />
-        <Breadcrumbs />
+      <body className="max-w-4xl mx-auto mt-5">
+        <Header />
         <main>{children}</main>
       </body>
     </html>

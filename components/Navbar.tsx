@@ -6,8 +6,12 @@ const Navbar = () => {
     <nav>
       <ul className="flex flex-col list-none gap-2">
         {navItems.map((item) => (
-          <Link href={item.link} key={item.name} className="text-orange-400">
-            / {item.name}
+          <Link
+            href={item.link}
+            key={item.name}
+            className="text-orange-400 text-[0.9em] uppercase tracking-wider before:content-['/']"
+          >
+            {item.name}
           </Link>
         ))}
       </ul>

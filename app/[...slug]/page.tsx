@@ -1,31 +1,61 @@
 import path from "node:path";
+import Link from "next/link";
+import { Suspense } from "react";
 import fs from "node:fs/promises";
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 
+import remarkMath from "remark-math";
 import rehypeSlug from "rehype-slug";
-import rehypePrettyCode from "rehype-pretty-code";
+import rehypeKatex from "rehype-katex";
+import rehypePrettyCode, { type Options } from "rehype-pretty-code";
+
+import { Tag } from "@/components/Tag";
+
+import { Spacer } from "@/components/Spacer";
+import { Comment } from "@/components/Comment";
+
+import { TagGroup } from "@/components/TagGroup";
 
 async function readPage(slug: string[]) {
   try {
     const filePath = path.join(process.cwd(), "app", ...slug) + ".md";
     const page = await fs.readFile(filePath, "utf8");
 
+    const vercelTheme = await import("@/app/vercel-theme.json");
+    const rehypePrettyCodeOptions: Options = {
+      theme: vercelTheme as any,
+    };
+
     type Frontmatter = {
       title: string;
       description: string;
+      published: boolean;
       og_image?: string;
     };
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      // Add any components you want to use
-      components: {},
+      components: {
+        Comment,
+
+        Link,
+
+        Spacer,
+
+        Tag,
+        TagGroup,
+      },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
-          rehypePlugins: [[rehypePrettyCode as any], rehypeSlug],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [
+            [rehypePrettyCode as any, rehypePrettyCodeOptions],
+            rehypeSlug,
+            rehypeKatex as any,
+          ],
         },
       },
     });
@@ -42,12 +72,21 @@ export async function generateMetadata({
 }) {
   const { frontmatter } = await readPage(params.slug);
   const metadata: Metadata = {
-    title: `${frontmatter.title}`,
+    title: frontmatter.title,
     description: frontmatter.description,
     openGraph: {
-      siteName: "MDX on Next.js 14",
+      siteName: "Edward Shturman's personal website",
     },
   };
+
+  metadata.openGraph!.images = [
+    {
+      url: `api/og?title=${frontmatter.title}`,
+      width: 1200,
+      height: 630,
+      alt: "",
+    },
+  ];
 
   if (frontmatter.og_image)
     metadata.openGraph!.images = [
@@ -56,14 +95,6 @@ export async function generateMetadata({
         width: 1200,
         height: 630,
         alt: "",
-      },
-    ];
-  else
-    metadata.openGraph!.images = [
-      {
-        url: `api/og?title=${frontmatter.title}`,
-        width: 1200,
-        height: 630,
       },
     ];
 
@@ -99,7 +130,21 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
-  const { content } = await readPage(params.slug);
+  const { content, frontmatter } = await readPage(params.slug);
 
-  return <>{content}</>;
+  return (
+    <Suspense>
+      {!frontmatter.published && (
+        <>
+          <br />
+          <Comment type="block">
+            Hey there, you&apos;ve found an unpublished page. Feel free to poke
+            around, but keep in mind the thoughts here are a bit more
+            in-progress than usual. :)
+          </Comment>
+        </>
+      )}
+      {content}
+    </Suspense>
+  );
 }

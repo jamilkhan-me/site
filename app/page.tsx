@@ -10,7 +10,6 @@ export default function Home() {
         Book Lover, Traveller, & Photographer <br />
         📍 Based in London
       </p>
-      <Navbar />
     </main>
   );
 }
