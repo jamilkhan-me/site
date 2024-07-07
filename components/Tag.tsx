@@ -25,7 +25,11 @@ export function Tag({ text, ...props }: TagProps) {
 
   return (
     <span {...props}>
-      <Link href={destination} scroll={false}>
+      <Link
+        href={destination}
+        scroll={false}
+        className="inline-block px-2  bg-orange-300 rounded-md text-[0.875rem] uppercase tracking-[1px] text-orange-900 font-semibold  before:content-['#'] mr-1 hover:bg-orange-200 selection:border selection:border-solid selection:before:content-['*'] selection:before:mr-1"
+      >
         {text}
       </Link>
     </span>

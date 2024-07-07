@@ -5,12 +5,13 @@ import { Spacer } from "@/components/Spacer";
 import { Comment } from "@/components/Comment";
 import { TagGroup } from "@/components/TagGroup";
 import { bookNote } from "./bookNote";
+import BookNote from "@/components/BookNoteCard";
 
 export const metadata: Metadata = {
-  title: "Notes",
+  title: "Book Notes",
   description: "Thoughts on design, engineering, learning, and life",
   openGraph: {
-    siteName: "Edward Shturman's personal website",
+    siteName: "Jamil Khan's personal website",
     images: [
       {
         url: "api/og?title=Notes",
@@ -37,32 +38,27 @@ export default function Notes({
 
   return (
     <>
-      <h1>Notes</h1>
-      <Comment type="block">
-        Thoughts on design, engineering, learning, and life
-      </Comment>
-      <Spacer size={8} />
-      <TagGroup
-        tags={Array.from(new Set(bookNote.flatMap((note) => note.tags))).map(
-          (tag) => ({ text: tag })
-        )}
-      />
+      <div className="flex flex-col items-center justify-center">
+        <span className="text-2xl pt-6 font-bold tracking-wider uppercase">
+          My Digital BookShelf
+        </span>
+        <Comment type="block">
+          Thoughts on design, engineering, learning, and life
+        </Comment>
+        <Spacer size={8} />
+        <TagGroup
+          tags={Array.from(new Set(bookNote.flatMap((note) => note.tags))).map(
+            (tag) => ({ text: tag })
+          )}
+        />
+      </div>
       <Spacer size={8} />
       <nav>
-        <ul>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-16 md:mx-auto">
           {filteredNotes.map((note, index) => (
-            <li key={index}>
-              <Link href={`/bookNote/${note.slug}`}>
-                {note.text}
-                <NoteIcon
-                  style={{
-                    scale: 0.8,
-                    marginLeft: "4px",
-                    verticalAlign: "-6px",
-                  }}
-                />
-              </Link>
-            </li>
+            <Link key={index} href={`/bookNote/${note.slug}`}>
+              <BookNote image={note.image} text={note.text} />
+            </Link>
           ))}
         </ul>
       </nav>

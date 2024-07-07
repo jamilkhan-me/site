@@ -9,7 +9,11 @@ export function Comment({
     <>
       {/* I refuse to have my ternaries bastardized */}
       {/* @prettier-ignore */}
-      {type === "block" ? <p>{children}</p> : <span>{children}</span>}
+      {type === "block" ? (
+        <p className="comment block-comment">{children}</p>
+      ) : (
+        <span className="comment inline-comment">{children}</span>
+      )}
     </>
   );
 }

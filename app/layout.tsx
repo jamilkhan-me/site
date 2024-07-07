@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${Geist.variable} ${GeistMono.variable}`}>
-      <body className="max-w-4xl mx-auto mt-5">
+      <body className="max-w-4xl mx-auto px-5 mt-5">
         <Header />
         <main>{children}</main>
       </body>

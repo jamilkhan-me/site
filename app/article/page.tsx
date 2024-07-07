@@ -8,6 +8,7 @@ import { TagGroup } from "@/components/TagGroup";
 import { notes } from "./notes";
 
 import styles from "./Notes.module.css";
+import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -40,32 +41,32 @@ export default function Notes({
 
   return (
     <>
-      <h1>Notes</h1>
-      <Comment type="block">
-        Thoughts on design, engineering, learning, and life
-      </Comment>
+      <div className="flex flex-col items-center justify-center">
+        <span className="text-2xl pt-6 font-bold tracking-wider uppercase">
+          Articles
+        </span>
+        <Comment type="block">
+          Thoughts on design, engineering, learning, and life
+        </Comment>
+        <Spacer size={8} />
+        <TagGroup
+          tags={Array.from(new Set(notes.flatMap((note) => note.tags))).map(
+            (tag) => ({ text: tag })
+          )}
+        />
+      </div>
       <Spacer size={8} />
-      <TagGroup
-        tags={Array.from(new Set(notes.flatMap((note) => note.tags))).map(
-          (tag) => ({ text: tag })
-        )}
-      />
-      <Spacer size={8} />
+
       <nav>
-        <ul>
+        <ul className="grid grid-cols-1 md:grid-cols-2  gap-3">
           {filteredNotes.map((note, index) => (
-            <li key={index}>
-              <Link className={styles.link} href={`/article/${note.slug}`}>
-                {note.text}
-                <NoteIcon
-                  style={{
-                    scale: 0.8,
-                    marginLeft: "4px",
-                    verticalAlign: "-6px",
-                  }}
-                />
-              </Link>
-            </li>
+            <Link key={index} href={`/article/${note.slug}`}>
+              <ArticleCard
+                text={note.text}
+                description={note.description}
+                tags={note.tags}
+              />
+            </Link>
           ))}
         </ul>
       </nav>
