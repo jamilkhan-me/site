@@ -4,14 +4,15 @@ import React from "react";
 export type ArticleCardProps = {
   text?: string;
   description: string;
+  image: string;
   tags?: string[];
 };
 
-const ArticleCard = ({ text, description, tags }: ArticleCardProps) => {
+const ArticleCard = ({ text, image, description, tags }: ArticleCardProps) => {
   return (
     <div className="w-96 h-[470px] rounded-md bg-slate-800 p-4 gap-4 hover:border hover:border-zinc-700 relative z-50">
       <Image
-        src="/og/cue.png"
+        src={image}
         alt="cue"
         width={200}
         height={200}

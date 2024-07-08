@@ -10,14 +10,9 @@ VS Code needs no introduction as one of the best code editors out there, but it 
 
 "We want our editor to feel more like an artist's canvas than a pilot's cockpit." — Caleb Porzio
 
-If you're using VS Code, you've probably played around with well-designed apps like Arc, Notion, Linear, and other staples of the developer's toolkit. There's a certain *cleanliness* to them — hardly anything vies for your attention or gets in your way. It's a stellar user experience we've come to know & love. It's time we extend this grace to the *developer experience*.
+If you're using VS Code, you've probably played around with well-designed apps like Arc, Notion, Linear, and other staples of the developer's toolkit. There's a certain _cleanliness_ to them — hardly anything vies for your attention or gets in your way. It's a stellar user experience we've come to know & love. It's time we extend this grace to the _developer experience_.
 
 I'll walk you through taking your VS Code from a fresh install to this:
-
-<GalleryCard
-  src="/assets/vs-code.png"
-  alt="My VS Code setup"
-/>
 
 ## Make it unobtrusive
 
@@ -69,7 +64,7 @@ div.split-view-view.visible::before {
 
 Font & theme choice is too subjective to be prescriptive, but if you're curious, I'm rocking [Commit Mono](https://commitmono.com) (my other picks are [Monaspace Neon](https://github.com/githubnext/monaspace), [iA Writer Mono](https://github.com/iaolo/iA-Fonts), and [Monocraft](https://github.com/IdreesInc/Monocraft)), [Vesper](https://github.com/raunofreiberg/vesper) (this site uses [Vercel](https://marketplace.visualstudio.com/items?itemName=achaq.vercel-theme)), and [Chalice](https://marketplace.visualstudio.com/items?itemName=artlaman.chalice-icon-theme).
 
-You'll notice that regardless of which font & theme you choose, it's not quite there yet. We need to *let it breathe*. I keep font size at `15`, line height at `2.5`, and word wrap `on`.
+You'll notice that regardless of which font & theme you choose, it's not quite there yet. We need to _let it breathe_. I keep font size at `15`, line height at `2.5`, and word wrap `on`.
 
 ```json
 "editor.fontSize": 15,

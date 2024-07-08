@@ -63,6 +63,7 @@ export default function Notes({
             <Link key={index} href={`/article/${note.slug}`}>
               <ArticleCard
                 text={note.text}
+                image={note.image}
                 description={note.description}
                 tags={note.tags}
               />

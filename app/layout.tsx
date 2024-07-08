@@ -4,6 +4,7 @@ import "./globals.css";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Geist = localFont({
   src: "../public/fonts/GeistVariableVF.woff2",
