@@ -4,13 +4,13 @@ import React from "react";
 const Header = () => {
   return (
     <div className=" my-20 p-8 relative overflow-hidden">
-      <div className="w-2/3">
+      <div className="md:w-2/3">
         <h1 className="text-6xl font-bold mb-2">
           <span className="text-gray-300">Hæ</span>
           <br />
-          <span className="text-orange-500">I'm Jamil.</span>
+          <span className="text-orange-500 font-bold">I'm Jamil.</span>
         </h1>
-        <p className="text-gray-600 text-xl mb-6">
+        <p className="text-gray-400 text-xl mb-6">
           A <span className="text-orange-500">Software Engineer</span> and a
           visual storyteller who's passionate about creating meaningful and
           memorable experiences. Don't be shy—{" "}

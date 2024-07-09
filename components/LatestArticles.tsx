@@ -61,17 +61,13 @@ const LatestArticles = () => {
   return (
     <div className=" p-8">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-8xl -z-10 font-bold text-gray-600">
-            Latest
-            <br />
-            Articles
-          </h2>
-          <button className="inline-block px-4 py-2  bg-orange-300 rounded-md text-[0.875rem] uppercase tracking-[1px] text-orange-900 font-semibold   hover:bg-orange-200">
-            View All
-          </button>
+        <div className="flex justify-between items-center">
+          <span className="text-3xl font-medium tracking-wider">
+            <span className="text-orange-400 mr-1">#</span>
+            Latest articles
+          </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -mt-28 z-50 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  z-50 gap-8">
           {articles.map((article, index) => (
             <ArticleCard key={index} {...article} />
           ))}

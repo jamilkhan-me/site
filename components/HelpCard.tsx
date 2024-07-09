@@ -43,9 +43,12 @@ const HelpSection = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-2">How can I help you?</h2>
-      <div className="w-16 h-1 bg-blue-500 mb-8"></div>
+    <div className="mx-auto py-8">
+      <span className="text-3xl font-medium tracking-wider">
+        <span className="text-orange-400 mr-1">#</span>
+        my approach
+      </span>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {helpItems.map((item, index) => (
           <HelpCard key={index} {...item} />
