@@ -25,10 +25,10 @@ export default function Projects() {
           Projects
         </span>
         <Comment type="block">
-          I've been building a lot of things. From small experiments to
+          I&apos;ve been building a lot of things. From small experiments to
           full-fledged web applications. Each one reflects my passion for coding
-          and design. Come explore the fruits of my labor and see what I've been
-          up to!
+          and design. Come explore the fruits of my labor and see what I&apos;ve
+          been up to!
         </Comment>
         <Spacer size={8} />
       </div>

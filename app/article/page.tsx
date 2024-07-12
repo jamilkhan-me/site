@@ -46,7 +46,7 @@ export default function Notes({
           Articles
         </span>
         <Comment type="block">
-          I don't write nearly enough to be good but this is my place to
+          I don&apos;t write nearly enough to be good but this is my place to
           practice. I write articles on a diverse range of non-fiction topics.
           Long and short, serious and fun, good and bad. <br />
           <br /> I hope you can find something you enjoy! 😊

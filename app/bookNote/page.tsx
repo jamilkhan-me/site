@@ -43,9 +43,10 @@ export default function Notes({
           My Digital BookShelf
         </span>
         <Comment type="block">
-          I'm an avid reader, always looking to learn and grow. Here, I share
-          detailed notes and insights from the books I've read, capturing the
-          key ideas and lessons that have inspired me along the way.
+          I&apos;m an avid reader, always looking to learn and grow. Here, I
+          share detailed notes and insights from the books I&apos;ve read,
+          capturing the key ideas and lessons that have inspired me along the
+          way.
         </Comment>
         <Spacer size={8} />
         <TagGroup
