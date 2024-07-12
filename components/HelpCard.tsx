@@ -17,37 +17,37 @@ const HelpCard = ({ icon, title, description }: HelpCardProps) => (
 const HelpSection = () => {
   const helpItems = [
     {
+      icon: "📝",
+      title: "Planning & strategy",
+      description:
+        "We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements.",
+    },
+    {
+      icon: "💻",
+      title: "Development & Progress Update",
+      description:
+        "Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.",
+    },
+    {
       icon: "🚀",
-      title: "Be More Productive",
+      title: "Development & Launch",
       description:
-        "How to execute efficiently, make time for what matters and have fun along the way.",
+        "This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up.",
     },
     {
-      icon: "🎬",
-      title: "Grow a Youtube Channel",
+      icon: "📈",
+      title: "Continuous improvement & monitor",
       description:
-        "Learn how to start a YouTube channel based on my years of experience.",
-    },
-    {
-      icon: "🤑",
-      title: "Build an Online Business",
-      description:
-        "How I built my business and the learnings I've made over the years so you can do the same.",
-    },
-    {
-      icon: "✍️",
-      title: "Boost Your Grades",
-      description:
-        "How to study effectively for exams, with the best evidence-based techniques.",
+        "Continuous improvement is the relentless pursuit of perfection, while monitoring is the vigilant guardian of progress. Together, I form the foundation of sustained excellence.",
     },
   ];
 
   return (
-    <div className="mx-auto py-8">
-      <span className="text-3xl font-medium tracking-wider">
+    <div className="my-40">
+      <h2 className="text-2xl font-medium tracking-wider">
         <span className="text-orange-400 mr-1">#</span>
-        my approach
-      </span>
+        My approach
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {helpItems.map((item, index) => (

@@ -37,6 +37,7 @@ export default function RootLayout({
       <body className="max-w-4xl mx-auto px-5 mt-5">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

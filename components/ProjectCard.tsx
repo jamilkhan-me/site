@@ -74,7 +74,7 @@ export function ProjectCard({
                   fill="currentColor"
                   stroke-width="0"
                   viewBox="0 0 16 16"
-                  className="h-3 w-3 stroke-1.5 text-zinc-500 group-hover:text-cyan-500"
+                  className="h-3 w-3 stroke-1.5 text-zinc-500 group-hover:text-orange-400"
                   height="1em"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ export function ProjectCard({
                   <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z"></path>
                 </svg>
                 <Link
-                  className="text-zinc-500 group-hover:text-cyan-500 text-xs"
+                  className="text-zinc-500 group-hover:text-orange-400 text-xs"
                   href={link}
                 >
                   {cta}

@@ -46,7 +46,10 @@ export default function Notes({
           Articles
         </span>
         <Comment type="block">
-          Thoughts on design, engineering, learning, and life
+          I don't write nearly enough to be good but this is my place to
+          practice. I write articles on a diverse range of non-fiction topics.
+          Long and short, serious and fun, good and bad. <br />
+          <br /> I hope you can find something you enjoy! 😊
         </Comment>
         <Spacer size={8} />
         <TagGroup

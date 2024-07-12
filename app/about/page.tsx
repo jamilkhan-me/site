@@ -9,14 +9,14 @@ const About = () => {
   return (
     <div className="mt-16">
       <span className="text-2xl font-medium tracking-wider">
-        <span className="text-orange-400 mr-1">/</span>
-        about-me
+        <span className="text-orange-400 mr-1">#</span>
+        About me
       </span>
-      <p>Who am i?</p>
+      <p>Who am i ?</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <span className="text-sm tracking-wide leading-7">
-            Hello, i’m Jamil Khan!
+            Hello, i’m Jamil Khan !!!
             <br />
             <br />
             I’m a self-taught front-end developer based in London, UK. I can
@@ -29,12 +29,12 @@ const About = () => {
           </span>
         </div>
         <div>
-          <Image src="/logo.svg" alt="my image" height={300} width={300} />
+          <Image src="/profile.png" alt="my image" height={300} width={300} />
         </div>
       </div>
-      <div className="my-20">
-        <Skills />
-      </div>
+
+      <Skills />
+
       <MyFunFacts />
       <HelpSection />
     </div>

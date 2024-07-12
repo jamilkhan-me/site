@@ -22,11 +22,11 @@ const MyFunFacts = () => {
   ];
 
   return (
-    <div>
-      <span className="text-2xl font-medium tracking-wider">
+    <div className="my-40">
+      <h2 className="text-2xl font-medium tracking-wider">
         <span className="text-orange-400 mr-1">#</span>
-        my-fun-facts
-      </span>
+        My fun facts
+      </h2>
       <div className="flex flex-row flex-wrap gap-2 w-2/3">
         {facts.map((fact, index) => (
           <FunFact key={index} text={fact} />

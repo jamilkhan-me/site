@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 export type LatestArticleCardProps = {
   title: string;
@@ -10,8 +11,8 @@ const ArticleCard = ({
   readMoreLink,
 }: LatestArticleCardProps) => (
   <div className="mb-8">
-    <h3 className="text-xl font-bold mb-2">{title}</h3>
-    <p className="text-gray-600 mb-2">{excerpt}</p>
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-gray-500 mb-2">{excerpt}</p>
     <a href={readMoreLink} className="text-gray-500 hover:text-gray-700">
       Read more →
     </a>
@@ -59,19 +60,25 @@ const LatestArticles = () => {
   ];
 
   return (
-    <div className=" p-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center">
-          <span className="text-3xl font-medium tracking-wider">
-            <span className="text-orange-400 mr-1">#</span>
-            Latest articles
-          </span>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  z-50 gap-8">
-          {articles.map((article, index) => (
-            <ArticleCard key={index} {...article} />
-          ))}
-        </div>
+    <div className="mx-auto">
+      <div className="flex justify-between items-center">
+        <span className="text-2xl font-bold tracking-wider">
+          <span className="text-orange-400 mr-1">#</span>
+          Read my articles
+        </span>
+        <span>
+          <Link
+            href="/article"
+            className="text-orange-400 hover:text-orange-200"
+          >
+            View all →
+          </Link>
+        </span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  z-50 gap-8">
+        {articles.map((article, index) => (
+          <ArticleCard key={index} {...article} />
+        ))}
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
   return (
-    <div className=" my-20 p-8 relative overflow-hidden">
+    <div className=" mt-28 mb-40 relative overflow-hidden">
       <div className="md:w-2/3">
         <h1 className="text-6xl font-bold mb-2">
           <span className="text-gray-300">Hæ</span>
@@ -17,10 +18,33 @@ const Header = () => {
           <span className="text-orange-500">lets talk!</span>
         </p>
         <div className="flex space-x-4">
-          <Image src="/icons/css.svg" alt="css" width={20} height={20} />
-          <Image src="/icons/css.svg" alt="css" width={20} height={20} />
-          <Image src="/icons/css.svg" alt="css" width={20} height={20} />
-          <Image src="/icons/css.svg" alt="css" width={20} height={20} />
+          <Link
+            href="https://www.linkedin.com/in/jamilkhaninfo/"
+            target="_blank"
+          >
+            <Image
+              src="/socialMediaIcon/linkedin.svg"
+              alt="linkedin"
+              width={30}
+              height={30}
+            />
+          </Link>
+          <Link href="https://x.com/JamilkhanInfo" target="_blank">
+            <Image
+              src="/socialMediaIcon/twitter.svg"
+              alt="twitter"
+              width={30}
+              height={30}
+            />
+          </Link>
+          <Link href="https://github.com/JamilKhan-me" target="_blank">
+            <Image
+              src="/socialMediaIcon/github.svg"
+              alt="css"
+              width={30}
+              height={30}
+            />
+          </Link>
         </div>
       </div>
       {/* <div className="absolute right-0 top-0 w-1/3 h-full">
