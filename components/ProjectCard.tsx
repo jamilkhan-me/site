@@ -60,8 +60,11 @@ export function ProjectCard({
             )}
             <div>
               <div className="flex flex-row flex-wrap mt-8">
-                {tools.map((tool) => (
-                  <span className="text-gray-500 mr-4 inline-block stroke-1">
+                {tools.map((tool, idx) => (
+                  <span
+                    key={idx}
+                    className="text-gray-500 mr-4 inline-block stroke-1"
+                  >
                     {tool}
                   </span>
                 ))}

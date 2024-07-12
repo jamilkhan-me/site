@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export type ProjectCardTypeProps = {
@@ -22,7 +23,13 @@ const ProjectCard = ({
       <div className="flex justify-between items-start mb-4">
         <div>
           {logo && (
-            <img src={logo} alt={`${title} logo`} className="h-8 mb-2" />
+            <Image
+              src={logo}
+              alt={`${title} logo`}
+              width={200}
+              height={200}
+              className="h-8 mb-2"
+            />
           )}
           <h3 className="text-xl font-bold text-white">{title}</h3>
           {subtitle && <p className="text-sm text-gray-400">{subtitle}</p>}

@@ -20,8 +20,11 @@ const ArticleCard = ({ text, image, description, tags }: ArticleCardProps) => {
       />
       <div className="flex flex-col  p-2">
         <div className="w-24 flex flex-row gap-2 py-4">
-          {tags?.map((tag) => (
-            <small className="font-light text-sm capitalize tracking-wide text-orange-400 ">
+          {tags?.map((tag, idx) => (
+            <small
+              key={idx}
+              className="font-light text-sm capitalize tracking-wide text-orange-400 "
+            >
               {tag}
             </small>
           ))}
@@ -37,9 +40,7 @@ const ArticleCard = ({ text, image, description, tags }: ArticleCardProps) => {
           <small className="font-light tracking-wide text-gray-400">
             August 17, 2024
           </small>
-          <small className="font-light tracking-wide text-gray-400">
-            August 17, 2024
-          </small>
+          <small className="font-light tracking-wide text-gray-400">👁️</small>
         </div>
       </div>
     </div>

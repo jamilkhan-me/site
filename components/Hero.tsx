@@ -9,12 +9,12 @@ const Header = () => {
         <h1 className="text-6xl font-bold mb-2">
           <span className="text-gray-300">Hæ</span>
           <br />
-          <span className="text-orange-500 font-bold">I'm Jamil.</span>
+          <span className="text-orange-500 font-bold">I&apos;m Jamil.</span>
         </h1>
         <p className="text-gray-400 text-xl mb-6">
           A <span className="text-orange-500">Software Engineer</span> and a
-          visual storyteller who's passionate about creating meaningful and
-          memorable experiences. Don't be shy—{" "}
+          visual storyteller who&apos;s passionate about creating meaningful and
+          memorable experiences. Don&apos;t be shy—{" "}
           <span className="text-orange-500">lets talk!</span>
         </p>
         <div className="flex space-x-4">
