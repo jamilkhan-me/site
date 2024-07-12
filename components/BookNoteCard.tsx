@@ -3,7 +3,7 @@ import React from "react";
 
 export type BookNoteCardProps = {
   text?: string;
-  image?: string;
+  image?: any;
 };
 
 const BookNote = ({ text, image }: BookNoteCardProps) => {
