@@ -22,9 +22,9 @@ else metadataBase = new URL(`http://localhost:${process.env.PORT || 3000}`);
 
 export const metadata: Metadata = {
   metadataBase,
-  title: "MDX on Next.js 14",
+  title: "Jamil Khan",
   description:
-    "An ergonomic, performant MDX setup for your Next.js 14 app, fit with YAML frontmatter parsing, dynamic metadata & OG image generation, and static site generation",
+    "A minimalist asthetic portfolio website built by Next JS 14, Typescript, Tailwindcss and MDX",
 };
 
 export default function RootLayout({

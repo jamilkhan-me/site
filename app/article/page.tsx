@@ -1,20 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-
 import { Spacer } from "@/components/Spacer";
 import { Comment } from "@/components/Comment";
 import { TagGroup } from "@/components/TagGroup";
-
 import { notes } from "./notes";
-
 import styles from "./Notes.module.css";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
   title: "Notes",
-  description: "Thoughts on design, engineering, learning, and life",
+  description:
+    "I DON'T WRITE NEARLY ENOUGH TO BE GOOD BUT THIS IS MY PLACE TO PRACTICE. I WRITE ARTICLES ON A DIVERSE RANGE OF NON-FICTION TOPICS. LONG AND SHORT, SERIOUS AND FUN, GOOD AND BAD. I HOPE YOU CAN FIND SOMETHING YOU ENJOY! 😊",
   openGraph: {
-    siteName: "Edward Shturman's personal website",
+    siteName: "Jamil Khan's personal website",
     images: [
       {
         url: "api/og?title=Notes",

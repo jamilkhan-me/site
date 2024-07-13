@@ -15,7 +15,7 @@ const About = () => {
       <p>Who am i ?</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <span className="text-sm tracking-wide leading-7">
+          <p className="text-gray-300">
             Hello, i’m Jamil Khan !!!
             <br />
             <br />
@@ -26,15 +26,13 @@ const About = () => {
             passion for over a year. I have been helping various clients to
             establish their presence online. I always strive to learn about the
             newest technologies and frameworks.
-          </span>
+          </p>
         </div>
         <div>
           <Image src="/profile.png" alt="my image" height={300} width={300} />
         </div>
       </div>
-
       <Skills />
-
       <MyFunFacts />
       <HelpSection />
     </div>

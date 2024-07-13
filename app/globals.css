@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: var(--font-geist);
+  --font-sans: var(--font-geist), sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --color-white: hsla(038deg, 100%, 090%, 1);
@@ -26,6 +26,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 180%;
+  font-size: 1rem;
+  font-family: var(--font-sans);
 }
 
 @layer base {
@@ -54,12 +62,12 @@
 
   /* Paragraphs */
   p {
-    @apply text-base tracking-wide leading-relaxed;
+    @apply text-base text-gray-400 tracking-wider leading-relaxed;
   }
 
   /* Links */
   a {
-    @apply text-inherit no-underline;
+    @apply text-orange-400 no-underline;
   }
 
   /* Paragraphs, Unordered and Ordered Lists */
@@ -95,8 +103,68 @@
   }
 
   /* Code */
+
   code {
     font-family: var(--font-mono);
+    font-size: small;
+    counter-reset: line;
+    background: var(--color-dark-gray-20);
+  }
+
+  :not(pre) > code {
+    box-shadow: 0 0 0 1px var(--color-dark-gray);
+    padding: 0.1em 0.4em;
+    border-radius: 0.4em;
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: 1rem 0;
+    font-size: 0.8em;
+  }
+
+  pre [data-line] {
+    padding: 0 1rem;
+  }
+
+  pre > code[data-line-numbers] > [data-line]::before {
+    content: counter(line);
+    counter-increment: line;
+    display: inline-block;
+    width: 2em;
+    margin-right: 2em;
+    text-align: right;
+    color: var(--color-dark-gray);
+    user-select: none;
+    font-variant-numeric: tabular-nums;
+  }
+
+  pre > code[data-line-numbers] > [data-line]:hover::before {
+    color: var(--color-light-gray);
+  }
+
+  pre
+    > code[data-line-numbers][data-line-numbers-max-digits="2"]
+    > [data-line]::before {
+    width: 2em;
+  }
+
+  pre
+    > code[data-line-numbers][data-line-numbers-max-digits="3"]
+    > [data-line]::before {
+    width: 3em;
+  }
+
+  span[data-highlighted-line] {
+    background-color: var(--color-compsigh-20);
+  }
+
+  span[data-highlighted-line-id="add"] {
+    background-color: var(--color-diff-add);
+  }
+
+  span[data-highlighted-line-id="remove"] {
+    background-color: var(--color-diff-remove);
   }
 }
 

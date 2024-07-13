@@ -19,6 +19,7 @@ import { Spacer } from "@/components/Spacer";
 import { Comment } from "@/components/Comment";
 import { Mention } from "@/components/Mention";
 import { TagGroup } from "@/components/TagGroup";
+import { Playground } from "@/components/Playground";
 
 async function readPage(slug: string[]) {
   try {
@@ -42,6 +43,7 @@ async function readPage(slug: string[]) {
       components: {
         Comment,
         TableOfContents,
+        Playground,
         GalleryCard,
         Grid,
         Link,
@@ -78,7 +80,7 @@ export async function generateMetadata({
     title: frontmatter.title,
     description: frontmatter.description,
     openGraph: {
-      siteName: "Edward Shturman's personal website",
+      siteName: "Jamil Khan's personal website",
     },
   };
 

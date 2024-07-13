@@ -9,7 +9,8 @@ import BookNote from "@/components/BookNoteCard";
 
 export const metadata: Metadata = {
   title: "Book Notes",
-  description: "Thoughts on design, engineering, learning, and life",
+  description:
+    "I'M AN AVID READER, ALWAYS LOOKING TO LEARN AND GROW. HERE, I SHARE DETAILED NOTES AND INSIGHTS FROM THE BOOKS I'VE READ, CAPTURING THE KEY IDEAS AND LESSONS THAT HAVE INSPIRED ME ALONG THE WAY.",
   openGraph: {
     siteName: "Jamil Khan's personal website",
     images: [

@@ -35,9 +35,15 @@ export function GalleryCard({
   return (
     <div className="flex flex-row flex-wrap gap-10">
       <figure>
-        {link ? <Link href={link}>{image}</Link> : image}
-        {title && <figcaption>{title}</figcaption>}
-        {description && <div>{description}</div>}
+        {link ? (
+          <Link className="relative rounded align-middle" href={link}>
+            {image}
+          </Link>
+        ) : (
+          image
+        )}
+        {title && <figcaption className="py-4">{title}</figcaption>}
+        {description && <div className="text-gray-300">{description}</div>}
         {link && (
           <>
             <Spacer size={10} />

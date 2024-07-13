@@ -8,6 +8,14 @@ published: true
 
 The first devlog for my site _(after [the project page](/projects/site))!_ I wanted to start writing these for myself as a personal record, as well as to showcase things that were fun to build. I aim to publish one after an update that I feel is noteworthy enough. This is one of those. :)
 
+<TableOfContents
+entries={[
+"The default path",
+"The alternate path",
+"A club for the rest of us"
+]}
+/>
+
 In this update:
 
 - [I tweak the site's visuals](#visuals)
@@ -34,9 +42,25 @@ I've got a few new ones:
 
 ### `Mention`
 
-As I was backfilling [my projects](/projects), it was important to me to shout out my collaborators. I took inspiration from Notion's inline mention, and crafted something similar. Check it out:
+As I was backfilling [my projects](/projects), it was <Mention name="jamil Khan" avatar="/profile.png" link="#mention" /> important to me to shout out my collaborators. I took inspiration from Notion's inline mention, and crafted something similar. Check it out:
 
 <Spacer size={16} />
+<Grid columns={2}>
+  <GalleryCard
+    src="/og/root.png"
+    alt="A screenshot of the site before I tweaked the colors"
+  />
+  <GalleryCard
+    src="/og/mdx-nextjs-14.png"
+    alt="A screenshot of the site after I tweaked the colors"
+  />
+</Grid>
+
+<Spacer size={16} />
+
+<Playground editable={true}>
+  A demo of the <code>Mention</code> component, written by <Mention name="Edward Shturman" avatar="/avatars/edward.png" link="#mention" />
+</Playground>
 
 <Spacer size={16} />
 

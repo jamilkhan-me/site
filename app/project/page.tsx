@@ -11,9 +11,9 @@ import { ProjectCard } from "@/components/ProjectCard";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Larger endeavors that have changed my life & work in some meaningful way",
+    "I'VE BEEN BUILDING A LOT OF THINGS. FROM SMALL EXPERIMENTS TO FULL-FLEDGED WEB APPLICATIONS. EACH ONE REFLECTS MY PASSION FOR CODING AND DESIGN. COME EXPLORE THE FRUITS OF MY LABOR AND SEE WHAT I'VE BEEN UP TO!",
   openGraph: {
-    siteName: "Edward Shturman's personal website",
+    siteName: "Jamil Khan's personal website",
   },
 };
 
