@@ -9,7 +9,7 @@ export type ProjectCardProps = {
   cta?: string;
   src: string;
   alt?: string;
-  tools: React.ElementType[];
+  tools: React.ReactNode[];
   maxWidth?: number;
 };
 

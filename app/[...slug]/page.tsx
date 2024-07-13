@@ -12,10 +12,12 @@ import rehypeKatex from "rehype-katex";
 import rehypePrettyCode, { type Options } from "rehype-pretty-code";
 
 import { Tag } from "@/components/Tag";
-
+import { TableOfContents } from "@/components/TableOfContents";
+import { GalleryCard } from "@/components/GalleryCard";
+import { Grid } from "@/components/Grid";
 import { Spacer } from "@/components/Spacer";
 import { Comment } from "@/components/Comment";
-
+import { Mention } from "@/components/Mention";
 import { TagGroup } from "@/components/TagGroup";
 
 async function readPage(slug: string[]) {
@@ -39,11 +41,12 @@ async function readPage(slug: string[]) {
       source: page,
       components: {
         Comment,
-
+        TableOfContents,
+        GalleryCard,
+        Grid,
         Link,
-
+        Mention,
         Spacer,
-
         Tag,
         TagGroup,
       },
