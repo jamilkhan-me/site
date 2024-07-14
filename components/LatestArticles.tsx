@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { RecentArticles } from "@/app/article/RecentArticle";
+
 export type LatestArticleCardProps = {
   text: string;
   description: string;

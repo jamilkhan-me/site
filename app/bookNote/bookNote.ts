@@ -8,20 +8,28 @@ type NoteProps = {
 
 export const bookNote: NoteProps[] = [
   {
-    text: "anything you want",
-    slug: "anything-you-want",
-    image: "/bookImage/anythingyouwant.jpg",
-    description:
-      "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
-    tags: ["Business"],
-  },
-  {
     text: "Do It today",
     slug: "do-it-today",
     image: "/bookImage/doittoday.png",
     description:
       "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
     tags: ["Motivation"],
+  },
+  {
+    text: "How to get rich",
+    slug: "how-to-get-rich",
+    image: "/bookImage/howtogetrich.png",
+    description:
+      "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
+    tags: ["Money"],
+  },
+  {
+    text: "Atomic habit",
+    slug: "atomic-habit",
+    image: "/bookImage/atomichabit.jpg",
+    description:
+      "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
+    tags: ["habit", "productivity"],
   },
   {
     text: "Hell Yeah or No",
@@ -32,12 +40,12 @@ export const bookNote: NoteProps[] = [
     tags: ["Self-help"],
   },
   {
-    text: "How to get rich",
-    slug: "how-to-get-rich",
-    image: "/bookImage/howtogetrich.png",
+    text: "anything you want",
+    slug: "anything-you-want",
+    image: "/bookImage/anythingyouwant.jpg",
     description:
       "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
-    tags: ["Money"],
+    tags: ["Business"],
   },
   {
     text: "Show Your work",

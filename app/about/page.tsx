@@ -15,7 +15,7 @@ const About = () => {
       <p>Who am i ?</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <p className="text-gray-300">
+          <p className="">
             Hello, I’m Jamil Khan !!!
             <br />
             <br />

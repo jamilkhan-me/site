@@ -79,13 +79,13 @@ body {
 
   /* List Items */
   li {
-    @apply my-1;
+    @apply my-1 text-gray-400;
   }
 
   /* Custom List Item Marker */
   li::marker,
   li::before {
-    color: var(--color-dark-gray);
+    @apply text-gray-400;
   }
 
   /* Unordered List Items */

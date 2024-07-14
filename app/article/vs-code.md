@@ -1,90 +1,78 @@
 ---
-title: "VS Code: an Artist's Canvas"
+title: "Make your VS Code as Canvas"
 description: "Extending aesthetics to the developer experience"
 published: true
 ---
 
-# VS Code: an Artist's Canvas
+# Make your VS Code as Canvas
 
-VS Code needs no introduction as one of the best code editors out there, but it ships with a lot of cruft out of the box.
+**Hey there!** 👋
+Let's chat about making VS Code look awesome and work even better for you. You know, Caleb Porzio had this great quote about wanting editors to feel more like an artist's canvas than a complicated cockpit. That's exactly what we're going for with VS Code!
 
-"We want our editor to feel more like an artist's canvas than a pilot's cockpit." — Caleb Porzio
+So, VS Code is like the go-to canvas for developers these days. Millions of us use it every day to build cool stuff. And just like how an artist wants a clean canvas to work their magic, we developers want our VS Code to be neat, tidy, and not get in our way.
 
-If you're using VS Code, you've probably played around with well-designed apps like Arc, Notion, Linear, and other staples of the developer's toolkit. There's a certain _cleanliness_ to them — hardly anything vies for your attention or gets in your way. It's a stellar user experience we've come to know & love. It's time we extend this grace to the _developer experience_.
+**Want to know how I set up my VS Code? It's pretty sweet, and I can walk you through it:**
 
-I'll walk you through taking your VS Code from a fresh install to this:
+### Remove the clutter
 
-## Make it unobtrusive
+There are so many bits and pieces every side of the VS code. I call them clutter. Cause they've never been used, rather they obstruct our productivity. that's why remove the clutter from the every side (top, bottom and sidebar) by following the command:
 
-Who needs [Subway Surfers](https://marketplace.visualstudio.com/items?itemName=jirkavrba.subway-surfers) when you've got the VS Code UI? Hit the Command Palette and jump into your `User Settings (JSON)`. Let's get trimming.
-
-Remove the minimap:
-
-```json
-"editor.minimap.enabled": false,
-"editor.scrollbar.vertical": "hidden",
-```
-
-Remove the top, bottom, and sidebar clutter:
+Go to `View` > `Command Pallete` > `Open User Setting (JSON)` :
 
 ```json
-"breadcrumbs.enabled": false,
-"window.commandCenter": false,
-"workbench.editor.showTabs": "none",
-"workbench.statusBar.visible": false,
-"workbench.layoutControl.enabled": false,
-"workbench.activityBar.location": "hidden",
-"workbench.editor.editorActionsLocation": "hidden",
-```
-
-## Make it legible
-
-I've seen a lot of "aesthetic VS Code" screenshots and they always seem to leave it here. I'm not sure why. For starters, we're able to read around 75 characters in one line before it becomes cumbersome. Notion's UI intentionally centers the page at a specific length, making it pleasant to read. Here's how I would recreate that:
-
-- Launch the Command Palette and `Toggle Centered Layout`. Now, you can drag the sliders to your preferred reading length.
-- Add a bit of top padding:
-
-```json
-"editor.padding.top": 200,
-```
-
-Note that when you enable Centered Layout, you'll notice some remnants from our subtraction earlier, such as the slider for Centered Layout. I personally prefer to hide these, so let's do that. You'll want to install the [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) extension, and follow the instructions to get the following snippet injected into VS Code:
-
-```css
-canvas.decorationsOverviewRuler {
-  display: none !important;
-}
-
-div.split-view-view.visible::before {
-  display: none !important;
+{
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "onWindowChange",
+  "editor.scrollbar.vertical": "hidden",
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "editor.fontSize": 15,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.minimap.enabled": false,
+  "workbench.editor.showTabs": "single"
 }
 ```
 
-## Make it look good
+### Change the default font and theme
 
-Font & theme choice is too subjective to be prescriptive, but if you're curious, I'm rocking [Commit Mono](https://commitmono.com) (my other picks are [Monaspace Neon](https://github.com/githubnext/monaspace), [iA Writer Mono](https://github.com/iaolo/iA-Fonts), and [Monocraft](https://github.com/IdreesInc/Monocraft)), [Vesper](https://github.com/raunofreiberg/vesper) (this site uses [Vercel](https://marketplace.visualstudio.com/items?itemName=achaq.vercel-theme)), and [Chalice](https://marketplace.visualstudio.com/items?itemName=artlaman.chalice-icon-theme).
+Your VS code fonts and theme could be different than mine. It's all depend on personal preference. But I use `Menlo, Monaco, monospace` as my font and `Dark theme` as default theme.
 
-You'll notice that regardless of which font & theme you choose, it's not quite there yet. We need to _let it breathe_. I keep font size at `15`, line height at `2.5`, and word wrap `on`.
+Regardless of variation theme and font, you should keep your font size `15` and line height at `2.5` and word wrap `on`.
 
-```json
-"editor.fontSize": 15,
-"editor.lineHeight": 2.5,
-"editor.wordWrap": "on",
-```
+### Code formatter
 
-Feel free to play around with the cursor:
+Who doesn't love `prettier` to format the code. It needs no evidence to be the best format till date.
 
-```json
-"editor.cursorSmoothCaretAnimation": "on",
-"editor.cursorBlinking": "phase",
-```
+### Extentions
 
-Lastly, I use a custom title bar:
+`Auto Close Tag` to automatically close HTML tags.
 
-```json
-"window.titleBarStyle": "custom",
-"window.title": "${folderName}: ${activeFolderShort} / ${activeEditorShort} ${dirty}",
-"window.titleSeparator": " — ",
-```
+`Auto Rename Tag` to automatically update matching HTML tags.
 
-There's so much tinkering you could do. Making your dev environment feel like home is worth the extra half hour. Just don't forget to do the work. ;)
+`Color Highlight` to highlight colors in CSS code.
+
+`Image Preview` to display an image preview next to the code
+
+`Prettier` to automatically format code.
+
+`Live Server` to create a live preview for the current project.
+
+### Other settings
+
+`Auto Save` set to `onFocusChange`, to automatically save files
+
+`Default Formatter` set to `Prettier - Code formatter (esbnp.prettier-vscode)`, to enable the Prettier extension to format our code
+
+`Format on Save` set to `true`, to have Prettier format our code each time we save it
+
+`Word Wrap` set to `on`, to avoid vertical scrollbars for long content
+
+`Tab Size` set to `2`, for better code readability

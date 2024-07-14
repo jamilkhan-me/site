@@ -16,12 +16,12 @@ export const RecentBookNote: RecentBookNoteTypeProps[] = [
     tags: ["Business"],
   },
   {
-    text: "Do It today",
-    slug: "/bookNote/do-it-today",
-    image: "/bookImage/doittoday.png",
+    text: "Atomic habit",
+    slug: "/bookNote/atomic-habit",
+    image: "/bookImage/atomichabit.jpg",
     description:
       "A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book.",
-    tags: ["Motivation"],
+    tags: ["habit", "productivity"],
   },
   {
     text: "Hell Yeah or No",

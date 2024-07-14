@@ -39,7 +39,7 @@ export function ProjectCard({
         <figure className="rounded-2xl overflow-hidden bg-zinc-800 border border-transparent group-hover:border-zinc-700 relative z-50">
           {link ? (
             <Link
-              className="h-44 sm:h-60 md:h-44 w-full relative rounded-2xl transition duration-500 bg-black/10 group-hover:bg-transparent"
+              className="h-44 w-full relative rounded-2xl transition duration-500 bg-black/10 group-hover:bg-transparent"
               href={link}
             >
               {image}
