@@ -27,16 +27,16 @@ export function GalleryCard({
       unoptimized
       src={src}
       alt={alt || title || ""}
-      width={500}
+      width={200}
       height={500}
     />
   );
 
   return (
-    <div className="flex flex-row flex-wrap gap-10">
+    <div className="flex flex-row flex-wrap">
       <figure>
         {link ? (
-          <Link className="relative rounded align-middle" href={link}>
+          <Link className="relative w-28 h-56 rounded align-middle" href={link}>
             {image}
           </Link>
         ) : (

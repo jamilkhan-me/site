@@ -20,6 +20,7 @@ import { Comment } from "@/components/Comment";
 import { Mention } from "@/components/Mention";
 import { TagGroup } from "@/components/TagGroup";
 import { Playground } from "@/components/Playground";
+import { BookDetail } from "@/components/BookDetail";
 
 async function readPage(slug: string[]) {
   try {
@@ -41,6 +42,7 @@ async function readPage(slug: string[]) {
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
       components: {
+        BookDetail,
         Comment,
         TableOfContents,
         Playground,

@@ -12,7 +12,7 @@ const Header = () => {
           <span className="text-orange-500 font-bold">I&apos;m Jamil.</span>
         </h1>
         <p className="text-gray-400 text-xl mb-6">
-          A <span className="text-orange-500">Software Engineer</span> and a
+          A <span className="text-orange-500">Full Stack Developer</span> and a
           visual storyteller who&apos;s passionate about creating meaningful and
           memorable experiences. Don&apos;t be shy—{" "}
           <span className="text-orange-500">lets talk!</span>

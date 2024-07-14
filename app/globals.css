@@ -8,7 +8,7 @@
 
   --color-white: hsla(038deg, 100%, 090%, 1);
   --color-black: hsla(038deg, 010%, 002%, 1);
-  --color-dark-gray: hsla(038deg, 010%, 040%, 1);
+  --color-dark-gray: rgb(112, 105, 92);
   --color-dark-gray-20: hsla(038deg, 010%, 040%, 0.2);
   --color-light-gray: hsla(038deg, 020%, 060%, 1);
   --color-light-gray-20: hsla(038deg, 020%, 060%, 0.2);

@@ -7,8 +7,17 @@ tags:
   - habits
   - personal development
   - productivity
+published: true
 ---
 
+<Spacer size={25}/>
+
+<Grid columns={2}>
+  <GalleryCard src="/bookImage/howtogetrich.png" alt="How to get rich"/>
+
+</Grid>
+
+<Spacer size={25}/>
 ## Important Quotes
 
 - Never trust the vast mountain of conventional wisdom. It contains great nuggets of wisdom, it is true. But they lie alongside rivers of fool's gold. Conventional wisdom daunts initiative and offers far too many convenient reasons for inaction, especially for those with a great deal to lose

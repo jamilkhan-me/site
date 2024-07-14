@@ -18,17 +18,5 @@ export function Grid({
     ? columnSizeDistribution.join(" ")
     : defaultColumnTemplate;
 
-  return (
-    <div
-      className="grid grid-cols-1 gap-4"
-      style={{
-        display: "grid",
-        gridTemplateColumns,
-        gap: "32px",
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="grid grid-cols-2">{children}</div>;
 }

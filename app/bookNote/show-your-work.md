@@ -1,0 +1,105 @@
+---
+title: "Show Your Work"
+author: "Austin Kleon"
+date: "12 September 2022"
+image: "/bookImage/show-your-work.png"
+tags:
+  - nonfiction
+  - personal development
+  - productivity
+published: true
+---
+
+<Spacer size={25}/>
+
+<BookDetail image="/bookImage/show-your-work.png" title="Show Your Work"
+author="Austin Kleon"
+read= "12 September 2022" 
+recommendation="7/10"
+/>
+
+<Spacer size={25}/>
+
+## Key Concepts
+
+<TableOfContents
+entries={[
+"Be really good at something",
+"Sharing or collaboration is the key to achieve something big",
+"Share whatever comes in your mind",
+"Teach others",
+"Leave your comfort zone",
+"Focus on days, not months or years",
+"Accept criticism"
+
+]}
+/>
+
+### Be really good at something
+
+- You have to be really good at something that people can’t ignore you.
+
+- Martin says, focus on getting really good, people will come to you.
+- Do what you do best and link to the rest.
+- Keep doing what you're doing until you see success. It's like, you’re holding on to the ladder. When they cut off your hands, hold on with your elbow. When they cut off your arms, hold on with your teeth.
+
+### Sharing or collaboration is the key to achieve something big
+
+- The best way to get started on the path is to sharing your work. If you’re in the very early stages, share your influences and what’s inspiring you. If you’re in the middle of executing a project, write about your methods or share works in progress. If you’ve just completed a project, show the final product, share scraps from the cutting-room floor, or write about what you learned.
+
+- Be open, share imperfect and unfinished work that you want feedback on, but don’t share absolutely everything. There’s a big, big difference between sharing and over-sharing.
+- Give what you have. To someone, it may be better than you dare to think.” —Henry Wadsworth.
+- You look back closely at history, many of the people who we think of as lone geniuses were actually part of “a whole scene of people who were supporting each other, looking at each other’s work, copying from each other, stealing ideas, and contributing ideas.” Scenius doesn’t take away from the achievements of those great individuals; it just acknowledges that good work isn’t created in a vacuum, and that creativity is always, in some sense, a collaboration, the result of a mind connected to other minds.
+- It often happens that two schoolboys can solve difficulties in their work for one another better than the master can,” wrote author C. S. Lewis.
+
+### Share whatever comes in your mind
+
+- The best way to get started on the path to sharing your work is to think about what you want to learn, and make a commitment to learning it in front of others. Find a scenius, pay attention to what others are sharing, and then start taking note of what they’re not sharing. Be on the lookout for voids that you can fill with your own efforts, no matter how bad they are at first. Don’t worry, for now, about how you’ll make money or a career out of it.
+
+- A lot of us go about our work and feel like we have nothing to show for it at the end of the day. But whatever the nature of your work, there is an art to what you do, and there are people who would be interested in that art, if only you presented it to them in the right way. In fact, sharing your process might actually be most valuable if the products of your work aren’t easily shared, if you’re still in the apprentice stage of your work, if you can’t just slap up a portfolio and call it a day, or if your process doesn’t necessarily lead to tangible finished products.
+- I like to work while the world is sleeping, and share while the world is at work.
+- Be open, share imperfect and unfinished work that you want feedback on, but don’t share absolutely everything. There’s a big, big difference between sharing and over-sharing.
+- Everybody loves a good story, but good storytelling doesn’t come easy to everybody. It’s a skill that takes a lifetime to master. So study the great stories and then go find some of your own. Your stories will get better the more you tell them.
+
+### Teach others
+
+- The minute you learn something, turn around and teach it to others. Share your reading list. Point to helpful reference materials. Create some tutorials and post them online. Use pictures, words, and video.
+
+- Teaching people doesn’t subtract value from what you do, it actually adds to it. When you teach someone how to do your work, you are, in effect, generating more interest in your work. People feel closer to your work because you’re letting them in on what you know.
+- Best of all, when you share your knowledge and your work with others, you receive an education in return. Author Christopher Hitchens said that the great thing about putting out a book is that “it brings you into contact with people whose opinions you should have canvassed before you ever pressed pen to paper.
+
+### Leave your comfort zone
+
+- Tom Waits, whenever Yorke feels like his songwriting is getting too comfortable or stale, he’ll pick up an instrument he doesn’t know how to play and try to write with it. This is yet another trait of amateurs—they’ll use whatever tools they can get their hands on to try to get their ideas into the world.
+
+- Your comfort zone is the biggest barrier to your success.
+
+### Focus on days, not months or years
+
+- Building a substantial body of work takes a long time—a lifetime, really—but thankfully, you don’t need that time all in one big chunk. So forget about decades, forget about years, and forget about months. Focus on days.
+
+- The day is the only unit of time that I can really get my head around. Seasons change, weeks are completely human-made, but the day has a rhythm. The sun goes up; the sun goes down. I can handle that.
+- You work on something a little bit every day, you end up with something that is massive.” —Kenneth Goldsmith.
+- A lot of the ideas in this book started out as tweets, which then became blog posts, which then became book chapters. Small things, over time, can get big.
+
+### Accept criticism
+
+- Fear is often just the imagination taking a wrong turn. Bad criticism is not the end of the world. As far as I know, no one has ever died from a bad review. Take a deep breath and the more criticism you take, the more you realize it can’t hurt you.
+
+- Every piece of criticism is an opportunity for new work. You can’t control what sort of criticism you receive, but you can control how you react to it.
+- Having your work hated by certain people is a badge of honor.
+- The biggest problem of success is that the world conspires to stop you doing the thing that you do, because you are successful - Neil Gaiman.
+
+## Other Quotes
+
+- In the beginner’s mind, there are many possibilities, In the expert’s mind, there are few - Shunryu Suzuki.
+
+- The stupidest possible creative act is still a creative act - Clay Shirky.
+- Don’t show your lunch or your latte; show your work.
+- As every writer knows, if you want to be a writer, you have to be a reader first. The writing community is full of lame-o people who want to be published in journals even though they don’t read the magazines that they want to be published in. I call these people human spam. They’re everywhere, and they exist in every profession.
+- If you want fans, you have to be a fan first. If you want to be accepted by a community, you have to first be a good citizen of that community. If you’re only pointing to your own stuff online, you’re doing it wrong. You have to be a connector. The writer Blake Butler calls this being an open node. If you want to get, you have to give. If you want to be noticed, you have to notice. Shut up and listen once in a while. Be thoughtful. Be considerate. Don’t turn into human spam. Be an open node.
+- Don’t be afraid to charge for your work, but put a price on it that you think is fair.
+- I know people who run multimillion-dollar businesses off of their mailing lists. The model is very simple: They give away great stuff on their sites, they collect emails, and then when they have something remarkable to share or sell, they send an email. You’d be amazed at how well the model works.
+- Yet a life of creativity is all about change—moving forward, taking chances, exploring new frontiers. “The real risk is in not changing,” said saxophonist John Coltrane. “I have to feel that I’m after something. If I make money, fine. But I’d rather be striving. It’s the striving, man, it’s that I want.
+- Above all, recognize that if you have had success, you have also had luck— and with luck comes obligation. You owe a debt, and not just to your gods. You owe a debt to the unlucky.” —Michael Lewis
+- Get a dog—dogs won’t let you get away with missing a day.

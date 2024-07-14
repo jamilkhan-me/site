@@ -15,7 +15,7 @@ const Header = () => {
           <Link
             href={item.link}
             key={item.name}
-            className="text-orange-400 inline-block px-2 uppercase text-sm tracking-wide border border-orange-400 border-dashed  hover:bg-orange-200 selection:border-solid selection:border "
+            className="text-orange-400 px-2 py-1 uppercase text-sm tracking-wide border border-orange-400 border-dashed  hover:bg-orange-200 selection:border-solid selection:border "
           >
             {item.name}
           </Link>
@@ -41,7 +41,7 @@ export const navItems = [
     link: "/article",
   },
   {
-    name: "Book Note",
+    name: "Note",
     link: "/bookNote",
   },
   {

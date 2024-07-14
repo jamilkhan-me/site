@@ -61,12 +61,12 @@ export function ProjectCard({
             <div>
               <div className="flex flex-row flex-wrap mt-8">
                 {tools.map((tool, idx) => (
-                  <span
+                  <small
                     key={idx}
                     className="text-gray-500 mr-4 inline-block stroke-1"
                   >
                     {tool}
-                  </span>
+                  </small>
                 ))}
               </div>
             </div>

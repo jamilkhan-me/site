@@ -16,10 +16,10 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <p className="text-gray-300">
-            Hello, i’m Jamil Khan !!!
+            Hello, I’m Jamil Khan !!!
             <br />
             <br />
-            I’m a self-taught front-end developer based in London, UK. I can
+            I’m a self-taught Full-Stack Developer based in London, UK. I can
             develop responsive websites from scratch and raise them into modern
             user-friendly web experiences. <br /> <br />
             Transforming my creativity and knowledge into a websites has been my

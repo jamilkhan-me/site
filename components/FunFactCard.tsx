@@ -12,11 +12,11 @@ const FunFact = ({ text }: FunFactTypeProps) => (
 
 const MyFunFacts = () => {
   const facts = [
-    "I like winter more than summer",
+    "I like summer more than winter",
     "I often bike with my friends",
-    "I like pizza and pasta",
-    "I was in Egypt, Poland and Turkey",
-    "My favorite movie is The Green Mile",
+    "I like turkish cuisine most",
+    "I travelled Germany, Italy, France, Netherland, Belgium, Poland, Austria, Czech Republic and Scotland",
+    "My favorite movie is The Pursuit of Happyness",
     "I am still in school",
     "I don't have any siblings",
   ];

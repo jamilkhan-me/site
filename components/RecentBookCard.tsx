@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RecentBookNote } from "@/app/bookNote/RecentBookNote";
 
 const BookNotes = () => {
   return (
@@ -18,55 +19,38 @@ const BookNotes = () => {
           </Link>
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <BookNote
-          coverSrc="/bookImage/atomichabit.jpg"
-          title="Die With Zero – Summary With Notes and Highlights"
-          author="Bill Perkins"
-          description="A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book."
-        />
-        <BookNote
-          coverSrc="/bookImage/anythingyouwant.jpg"
-          title="Atomic Habits (James Clear) – Book Summary, Notes & Highlights"
-          author="James Clear"
-          description="This book helped me understand how habits are formed and what we can do to build long-lasting chains of cues, cravings, responses, and rewards to create systems that will help us achieve our goals."
-        />
-        <BookNote
-          coverSrc="/bookImage/cannothurtme.jpg"
-          title="Die With Zero – Summary With Notes and Highlights"
-          author="Bill Perkins"
-          description="A practical guide to getting the most out of your money – and your life. Including highlights, recommendations, and a full summary of the book."
-        />
-        <BookNote
-          coverSrc="/bookImage/deepwork.jpeg"
-          title="Atomic Habits (James Clear) – Book Summary, Notes & Highlights"
-          author="James Clear"
-          description="This book helped me understand how habits are formed and what we can do to build long-lasting chains of cues, cravings, responses, and rewards to create systems that will help us achieve our goals."
-        />
+      <div>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {RecentBookNote.map((item) => (
+            <Link href={item.slug} key={item.text}>
+              <BookNote
+                image={item.image}
+                text={`${item.text} – Summary With Notes and Highlights`}
+                description={item.description}
+                slug={item.slug}
+              />
+            </Link>
+          ))}
+        </ul>
       </div>
     </div>
   );
 };
 
 export type BookNoteTypeProps = {
-  coverSrc: string;
-  title: string;
-  author: string;
+  image: string;
+  text: string;
+  slug: string;
   description: string;
 };
 
-const BookNote = ({
-  coverSrc,
-  title,
-  author,
-  description,
-}: BookNoteTypeProps) => {
+const BookNote = ({ image, text, slug, description }: BookNoteTypeProps) => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 group">
       <div className="w-1/3">
         <Image
-          src={coverSrc}
-          alt={`Cover of ${title}`}
+          src={image}
+          alt={`Cover of ${text}`}
           width={150}
           height={225}
           className="w-full mt-2 rounded-lg h-auto"
@@ -74,14 +58,12 @@ const BookNote = ({
       </div>
       <div className="w-2/3">
         <Link
-          href={""}
-          className="text-xl hover:text-orange-400 font-semibold text-white mb-2"
+          href={slug}
+          className="text-xl group-hover:text-orange-400 font-semibold text-white mb-2"
         >
-          {title}
+          {text}
         </Link>
-        <p className="text-sm text-gray-600 mb-2">
-          Summary With Notes and Highlights
-        </p>
+
         <p className="text-sm">{description}</p>
       </div>
     </div>
