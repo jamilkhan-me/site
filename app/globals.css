@@ -1,0 +1,595 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GeistSite";
+  src: url("/fonts/GeistVariableVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-sans: var(--font-geist), sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-white: hsla(038deg, 100%, 090%, 1);
+  --color-black: hsla(038deg, 010%, 002%, 1);
+  --color-dark-gray: rgb(112, 105, 92);
+  --color-dark-gray-20: hsla(038deg, 010%, 040%, 0.2);
+  --color-light-gray: hsla(038deg, 020%, 060%, 1);
+  --color-light-gray-20: hsla(038deg, 020%, 060%, 0.2);
+  --color-compsigh: hsla(038deg, 100%, 050%, 1);
+  --color-compsigh-20: hsla(038deg, 100%, 050%, 0.2);
+  --color-compsigh-60: hsla(038deg, 100%, 050%, 0.6);
+  --color-diff-add: hsla(120deg, 100%, 025%, 0.2);
+  --color-diff-remove: hsla(360deg, 100%, 050%, 0.2);
+
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+/* ── Light mode overrides ────────────────────────────────────────── */
+html:not(.dark) {
+  --color-white: hsla(038deg, 010%, 010%, 1);
+  --color-black: hsla(038deg, 020%, 96%, 1);
+  --color-dark-gray: rgb(140, 130, 115);
+  --color-dark-gray-20: hsla(038deg, 010%, 040%, 0.12);
+  --color-light-gray: hsla(038deg, 020%, 040%, 1);
+  --color-light-gray-20: hsla(038deg, 020%, 040%, 0.15);
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  line-height: 170%;
+  font-size: 1.0625rem;
+  font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply my-6;
+    line-height: 1.2;
+    font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+  }
+  /* Headings */
+  h1 {
+    @apply text-3xl font-bold tracking-wide;
+  }
+
+  h2 {
+    @apply text-2xl tracking-wide font-bold;
+  }
+
+  h3 {
+    @apply text-xl tracking-wide font-bold;
+  }
+
+  /* Paragraphs */
+  p {
+    @apply text-base text-gray-400 tracking-wider leading-relaxed;
+  }
+
+  /* Links */
+  a {
+    @apply text-orange-400 no-underline;
+  }
+
+  /* Paragraphs, Unordered and Ordered Lists */
+  p,
+  ul,
+  ol {
+    @apply my-4;
+  }
+
+  /* List Items */
+  li {
+    @apply my-1 text-gray-400;
+  }
+
+  /* Custom List Item Marker */
+  li::marker,
+  li::before {
+    @apply text-gray-400;
+  }
+
+  /* Unordered List Items */
+  ul > li {
+    @apply list-none relative pl-6;
+  }
+
+  ul > li::before {
+    @apply absolute ml-[-22px] mt-[-1px] content-["-"];
+  }
+
+  /* Nested Unordered List Items */
+  ul ul > li {
+    @apply ml-4;
+  }
+
+  /* Code */
+
+  code {
+    font-family: "GeistSite", ui-monospace, monospace;
+    font-size: small;
+    counter-reset: line;
+    background: var(--color-dark-gray-20);
+  }
+
+  :not(pre) > code {
+    box-shadow: 0 0 0 1px var(--color-dark-gray);
+    padding: 0.1em 0.4em;
+    border-radius: 0.4em;
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: 1rem 0;
+    font-size: 0.8em;
+  }
+
+  pre [data-line] {
+    padding: 0 1rem;
+  }
+
+  pre > code[data-line-numbers] > [data-line]::before {
+    content: counter(line);
+    counter-increment: line;
+    display: inline-block;
+    width: 2em;
+    margin-right: 2em;
+    text-align: right;
+    color: var(--color-dark-gray);
+    user-select: none;
+    font-variant-numeric: tabular-nums;
+  }
+
+  pre > code[data-line-numbers] > [data-line]:hover::before {
+    color: var(--color-light-gray);
+  }
+
+  pre
+    > code[data-line-numbers][data-line-numbers-max-digits="2"]
+    > [data-line]::before {
+    width: 2em;
+  }
+
+  pre
+    > code[data-line-numbers][data-line-numbers-max-digits="3"]
+    > [data-line]::before {
+    width: 3em;
+  }
+
+  span[data-highlighted-line] {
+    background-color: var(--color-compsigh-20);
+  }
+
+  span[data-highlighted-line-id="add"] {
+    background-color: var(--color-diff-add);
+  }
+
+  span[data-highlighted-line-id="remove"] {
+    background-color: var(--color-diff-remove);
+  }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+
+  .black-gradient {
+    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+  }
+
+  /* Book cover css */
+  .book-wrapper {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 12px;
+    padding: 4px;
+  }
+  .book-items {
+    position: relative;
+    cursor: default;
+    padding: 16px;
+    margin: 0;
+    display: grid;
+    break-inside: avoid;
+  }
+
+  .main-book-wrap {
+    position: relative;
+  }
+
+  .book-cover {
+    position: relative;
+  }
+
+  .book-cover .book-inside {
+    position: absolute;
+    width: 90%;
+    height: 96%;
+    top: 1%;
+    left: 16px;
+    border: 1px solid grey;
+    border-radius: 2px 6px 6px 2px;
+    background: white;
+    box-shadow: 10px 40px 40px -10px #00000030, inset -2px 0 0 grey,
+      inset -3px 0 0 #dbdbdb, inset -4px 0 0 white, inset -5px 0 0 #dbdbdb,
+      inset -6px 0 0 white, inset -7px 0 0 #dbdbdb, inset -8px 0 0 white,
+      inset -9px 0 0 #dbdbdb;
+  }
+
+  .book-cover .book-image {
+    line-height: 0;
+    position: relative;
+    border-radius: 2px 6px 6px 2px;
+    box-shadow: 6px 6px 18px -2px rgba(0, 0, 0, 0.2),
+      24px 28px 40px -6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    transform: perspective(2000px) rotateY(-15deg) translateX(-10px)
+      scaleX(0.94);
+    cursor: pointer;
+  }
+
+  .book-image img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    width: 100%;
+    border-radius: 2px 6px 6px 2px;
+  }
+
+  .book-image:hover {
+    transform: perspective(2000px) rotateY(0deg) translateX(0px) scaleX(1);
+    transform-style: preserve-3d;
+    box-shadow: 6px 6px 12px -1px rgba(0, 0, 0, 0.1),
+      20px 14px 16px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .effect {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    margin-left: 16px;
+    top: 0;
+    border-left: 2px solid #00000010;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transition: all 0.5s ease;
+    z-index: 5;
+  }
+
+  .light {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+    transition: all 0.5s ease;
+    z-index: 4;
+  }
+
+  .book-image:hover .effect {
+    margin-left: 14px;
+  }
+
+  .realvjy {
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+    text-align: center;
+  }
+
+  .comment {
+    font-size: 0.875rem;
+    color: var(--color-light-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .inline-comment {
+    margin-left: 20px;
+  }
+
+  .inline-comment::before {
+    content: "// ";
+    font-size: 0.9em;
+    vertical-align: top;
+  }
+
+  .block-comment::before {
+    content: "\002F* ";
+  }
+
+  .block-comment::after {
+    content: " *\002F";
+  }
+
+  @media (max-width: 700px) {
+    span.inline-comment {
+      display: block;
+      margin-left: 0px;
+    }
+  }
+}
+
+/* Add to globals.css — orange dark theme article prose */
+
+.prose-article {
+  font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #9a9a9a;
+}
+
+.prose-article p {
+  margin-bottom: 20px;
+}
+
+/* Section headings with orange left bar */
+.prose-article h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 48px 0 0;
+  color: #ffffff;
+  line-height: 1.2;
+  font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prose-article h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 28px;
+  background: #e07230;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Divider immediately after h2 */
+.prose-article h2 + hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 14px 0 22px;
+}
+
+.prose-article h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 30px 0 10px;
+  color: #e5e5e5;
+  font-family: "GeistSite", ui-sans-serif, system-ui, sans-serif;
+}
+
+.prose-article hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 10px 0 20px;
+}
+
+.prose-article ul,
+.prose-article ol {
+  margin: 0 0 20px 24px;
+}
+
+.prose-article li {
+  margin-bottom: 6px;
+}
+
+.prose-article a {
+  color: #e07230;
+  text-decoration: none;
+}
+
+.prose-article a:hover {
+  text-decoration: underline;
+}
+
+.prose-article strong {
+  color: #e0e0e0;
+  font-weight: 700;
+}
+
+.prose-article em {
+  font-style: italic;
+}
+
+.prose-article code {
+  font-family: Menlo, Monaco, monospace;
+  font-size: 12.5px;
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: #d3d3d3;
+}
+
+.prose-article pre {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #b0b0b0;
+}
+
+.prose-article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.prose-article blockquote {
+  border-left: 3px solid #e07230;
+  padding-left: 16px;
+  color: #666;
+  font-style: italic;
+  margin: 24px 0;
+}
+
+/* ── Mobile prose overrides ────────────────────────────────────── */
+@media (max-width: 640px) {
+  .prose-article {
+    font-size: 16px;
+  }
+
+  .prose-article h2 {
+    font-size: 23px;
+    margin: 36px 0 0;
+  }
+
+  .prose-article h3 {
+    font-size: 18px;
+  }
+
+  .prose-article ul,
+  .prose-article ol {
+    margin-left: 18px;
+  }
+
+  .prose-article pre {
+    padding: 14px;
+    font-size: 12px;
+    /* Prevent pre blocks from causing horizontal scroll */
+    max-width: 100%;
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+  }
+
+  .prose-article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose-article table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+/* ── Light mode: prose-article overrides ──────────────────────────── */
+html:not(.dark) .prose-article {
+  color: #3a3a3a;
+}
+
+html:not(.dark) .prose-article h2 {
+  color: #111111;
+}
+
+html:not(.dark) .prose-article h3 {
+  color: #222222;
+}
+
+html:not(.dark) .prose-article h2 + hr {
+  border-top: 1px solid #e0e0e0;
+}
+
+html:not(.dark) .prose-article hr {
+  border-top: 1px solid #e0e0e0;
+}
+
+html:not(.dark) .prose-article strong {
+  color: #111111;
+}
+
+html:not(.dark) .prose-article code {
+  background: #f0ede8;
+  border: 1px solid #d5cfc6;
+  color: #333;
+}
+
+html:not(.dark) .prose-article pre {
+  background: #f5f2ee;
+  border: 1px solid #e0dbd3;
+  color: #333;
+}
+
+html:not(.dark) .prose-article blockquote {
+  color: #777;
+}
+
+/* ── Light mode: base element overrides ──────────────────────────── */
+html:not(.dark) body {
+  background-color: #f5f2ee;
+  color: #1a1a1a;
+}
+
+html:not(.dark) p {
+  color: #4a4a4a;
+}
+
+html:not(.dark) li {
+  color: #4a4a4a;
+}
+
+html:not(.dark) li::marker,
+html:not(.dark) li::before {
+  color: #6a6a6a;
+}
+
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+  color: #111111;
+}
+
+html:not(.dark) a {
+  color: #c05a00;
+}
+
+html:not(.dark) code {
+  background: #ede8e1;
+  box-shadow: 0 0 0 1px #c8c0b4;
+  color: #333;
+}
+
+html:not(.dark) pre {
+  background: #ede8e1;
+}
+
+html:not(.dark) :not(pre) > code {
+  box-shadow: 0 0 0 1px #c8c0b4;
+}
