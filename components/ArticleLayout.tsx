@@ -120,9 +120,7 @@ export default function ArticleLayout({
           <div className="flex items-center gap-2 font-sans text-[14px] text-[#777] dark:text-[#555] mb-4">
             {date && <time>{date}</time>}
             {date && <span className="text-[#bbb] dark:text-[#2a2a2a]">|</span>}
-            <Link href="#comments" className="text-[#e07230] hover:underline transition-colors">
-              Comments
-            </Link>
+            
           </div>
 
           {/* Title */}

@@ -7,21 +7,21 @@ type RecentArticleTypeProps = {
 };
 
 export const RecentArticles: RecentArticleTypeProps[] = [
-  {
-    text: `Redesign my portfolio version 3.0`,
-    slug: "/article/redesign-my-portfolio",
-    image: "/projectImages/myportfolio.png",
+   {
+    text: `Launch a Secure EC2 Web Server from Scratch`,
+    slug: "/article/aws-project-blog",
+    image: "/projectImages/AWSProject-01.png",
     description:
-      "I've given a brand new look to my portfolio. I've always wanted to build an asthetic and minimal type portfolio. I wanted not too depend on so many plugins. So, Finally I met my criteria to build my identity on the web.",
-    tags: ["life"],
+      "Build and harden your first EC2 instance",
+    tags: ["AWS", "EC2", "Cloud"],
   },
   {
-    text: `My 2023 annual review`,
-    slug: "/article/my-2023-annual-review",
-    image: "/og/dcraft.png",
+    text: `Host a Static Website on S3 + CloudFront CDN`,
+    slug: "/article/day-2-s3-cloudfront-static-website",
+    image: "/projectImages/AWSProject-02.png",
     description:
-      "Annual review is sort of self-reflection. Reflecting on the past year might allow me to learn from experiences, recognizing what worked well and what didn't. It's like looking in the rearview mirror before steering toward the destination",
-    tags: ["life"],
+      "Host a globally distributed, HTTPS-secured static website on Amazon S3 with CloudFront as your CDN — zero servers, zero OS patches, near-zero cost.",
+    tags: ["S3", "CloudFront", "CDN"],
   },
   {
     text: "Site v1.1: Tags",

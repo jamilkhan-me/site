@@ -4,48 +4,30 @@ type NoteProps = {
   description: string;
   image: string;
   tags: string[];
+  date: string;
 };
 
 export const notes: NoteProps[] = [
+
   {
-    text: `Redesign my portfolio version 3.0`,
-    slug: "/redesign-my-portfolio",
-    image: "/projectImages/myportfolio.png",
+    text: `Launch a Secure EC2 Web Server from Scratch`,
+    slug: "/aws-project-blog",
+    image: "/projectImages/AWSProject-01.png",
     description:
-      "I've given a brand new look to my portfolio. I've always wanted to build an aesthetic and minimal type portfolio. I wanted not to depend on so many plugins. So, finally I met my criteria to build my identity on the web.",
-    tags: ["life"],
+      "Build and harden your first EC2 instance",
+    tags: ["AWS", "EC2", "Cloud"],
+    date: "June 01, 2026",
+  },
+  {
+    text: `Host a Static Website on S3 + CloudFront CDN`,
+    slug: "/day-2-s3-cloudfront-static-website",
+    image: "/projectImages/AWSProject-02.png",
+    description:
+      "Host a globally distributed, HTTPS-secured static website on Amazon S3 with CloudFront as your CDN — zero servers, zero OS patches, near-zero cost.",
+    tags: ["S3", "CloudFront", "CDN"],
+    date: "June 02, 2026",
   },
   
-  {
-    text: `"It's easy"`,
-    slug: "easy",
-    image: "/og/dcraft.png",
-    description:
-      "I don't like this phrase. The struggle of the task is part of the reward of seeing it through.",
-    tags: ["life"],
-  },
-  {
-    text: "Site v1.1: Tags",
-    slug: "site-v1-1",
-    image: "/og/compsigh.png",
-    description:
-      "The first devlog for my site. I tweak visuals, introduce new components, and add tags to Artifacts and Notes.",
-    tags: ["devlog", "engineering"],
-  },
-  {
-    text: "VS Code: an Artist's Canvas",
-    slug: "vs-code",
-    image: "/og/cue.png",
-    description:
-      "Extending aesthetics to the developer experience — how I set up VS Code to feel more like a canvas than a cockpit.",
-    tags: ["guide", "setup"],
-  },
-  {
-    text: "Setting up MDX on Next.js 14",
-    slug: "mdx-nextjs-14",
-    image: "/og/mdx-nextjs-14.png",
-    description:
-      "It's comically nontrivial to set up an ergonomic, performant MDX Next.js app, with all the bells & whistles like parsing YAML frontmatter. Here's how I did it.",
-    tags: ["guide", "engineering"],
-  },
+
+  
 ];

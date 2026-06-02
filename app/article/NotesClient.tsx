@@ -10,6 +10,7 @@ type NoteProps = {
   description: string;
   image: string;
   tags: string[];
+  date: string
 };
 
 type SortOption = "recent" | "oldest" | "az";
@@ -175,6 +176,7 @@ export default function NotesClient({ notes, allTags }: Props) {
                     image={note.image}
                     description={note.description}
                     tags={note.tags}
+                    date={note.date}
                   />
                 </Link>
               </li>

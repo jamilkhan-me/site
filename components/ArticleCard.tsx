@@ -8,9 +8,10 @@ export type ArticleCardProps = {
   description: string;
   image: string;
   tags?: string[];
+  date?: string;
 };
 
-const ArticleCard = ({ text, image, description, tags }: ArticleCardProps) => {
+const ArticleCard = ({ text, image, description, tags, date }: ArticleCardProps) => {
   return (
     <div className="group w-full h-full flex flex-col bg-[#f5f2ee] dark:bg-[#1a1a1a] border border-[#e0dbd3] dark:border-[#222]
       rounded-[12px] overflow-hidden
@@ -59,7 +60,7 @@ const ArticleCard = ({ text, image, description, tags }: ArticleCardProps) => {
 
         {/* Footer */}
         <div className="flex items-center justify-between pt-[10px] border-t border-[#e0dbd3] dark:border-[#1e1e1e] mt-auto">
-          <span className="text-[12px] text-[#999] dark:text-[#3a3a3a]">Aug 17, 2024</span>
+          <span className="text-[12px] text-[#999] dark:text-[#3a3a3a]">{date}</span>
           <span className="text-[12px] font-medium text-[#e07230] flex items-center gap-1
             opacity-0 group-hover:opacity-100 transition-opacity duration-150">
             Read article
