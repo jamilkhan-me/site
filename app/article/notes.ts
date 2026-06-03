@@ -45,6 +45,15 @@ export const notes: NoteProps[] = [
     tags: ["iTerm2", "Terminal",],
     date: "June 03, 2026",
   },
+  {
+    text: `Build a Serverless REST API with Lambda + API Gateway`,
+    slug: "/day4-project-Build-serverless-lambda-apigateway",
+    image: "/projectImages/AWSProjectArchitect-04.png",
+    description:
+      "No servers. No EC2. No VPC. Just three Lambda functions, an API Gateway, and a DynamoDB table — a fully working REST API that scales to zero when idle and to millions of requests on demand",
+    tags: ["Lambda", "API Gateway",  "Serverless", ],
+    date: "June 04, 2026",
+  },
 
   
 ];

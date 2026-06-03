@@ -49,11 +49,12 @@ export const RecentArticles: RecentArticleTypeProps[] = [
     tags: ["guide", "engineering"],
   },
   {
-    text: `"It's easy"`,
-    slug: "/article/easy",
-    image: "/og/dcraft.png",
+    text: `Build a Serverless REST API with Lambda + API Gateway`,
+    slug: "/article/day4-project-Build-serverless-lambda-apigateway",
+    image: "/projectImages/AWSProjectArchitect-04.png",
     description:
-      "It's comically nontrivial to set up an ergonomic, performant MDX Next.js app, with all the bells & whistles like parsing YAML frontmatter. Here's how I did it.",
-    tags: ["life"],
+      "No servers. No EC2. No VPC. Just three Lambda functions, an API Gateway, and a DynamoDB table — a fully working REST API that scales to zero when idle and to millions of requests on demand",
+    tags: ["Lambda", "API Gateway",  "Serverless", ],
+ 
   },
 ];
