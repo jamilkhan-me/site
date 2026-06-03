@@ -24,20 +24,21 @@ export const RecentArticles: RecentArticleTypeProps[] = [
     tags: ["S3", "CloudFront", "CDN"],
   },
   {
-    text: "Site v1.1: Tags",
-    slug: "/article/site-v1-1",
-    image: "/og/compsigh.png",
+    text: "Build a Production-Grade VPC with Public & Private Subnets",
+    slug: "/article/day3-project-VPC--public-private-subnets",
+    image: "/projectImages/AWSProjectArchitect-03.png",
     description:
-      "It's comically nontrivial to set up an ergonomic, performant MDX Next.js app, with all the bells & whistles like parsing YAML frontmatter. Here's how I did it.",
-    tags: ["devlog", "engineering"],
+      "Stop using the default VPC. Build a proper network from scratch — public and private subnets across two availability zones, an internet gateway, a NAT gateway, and route tables that actually make sense.",
+   tags: ["VPC", "Networking", "Subnets"],
   },
-  {
-    text: "Make your VS Code as Canvas",
-    slug: "/article/vs-code",
-    image: "/og/cue.png",
+    {
+    text: `How I Made the Default MacBook Terminal Look Pro`,
+    slug: "/article/how-to-make-macbook-terminal-look-pro",
+    image: "/projectImages/iTerm2.png",
     description:
-      "It's comically nontrivial to set up an ergonomic, performant MDX Next.js app, with all the bells & whistles like parsing YAML frontmatter. Here's how I did it.",
-    tags: ["guide", "setup"],
+      "Customise your McBook Terminal ana give it pro look.",
+    tags: ["iTerm2", "Terminal",],
+  
   },
   {
     text: "Setting up MDX on Next.js 14",

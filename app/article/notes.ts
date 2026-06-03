@@ -27,7 +27,24 @@ export const notes: NoteProps[] = [
     tags: ["S3", "CloudFront", "CDN"],
     date: "June 02, 2026",
   },
-  
+  {
+    text: `Build a Production-Grade VPC with Public & Private Subnets`,
+    slug: "/day3-project-VPC--public-private-subnets",
+    image: "/projectImages/AWSProjectArchitect-03.png",
+    description:
+      "Stop using the default VPC. Build a proper network from scratch — public and private subnets across two availability zones, an internet gateway, a NAT gateway, and route tables that actually make sense.",
+    tags: ["VPC", "Networking", "Subnets"],
+    date: "June 03, 2026",
+  },
+  {
+    text: `How I Made the Default MacBook Terminal Look Pro`,
+    slug: "/how-to-make-macbook-terminal-look-pro",
+    image: "/projectImages/iTerm2.png",
+    description:
+      "Customise your McBook Terminal ana give it pro look.",
+    tags: ["iTerm2", "Terminal",],
+    date: "June 03, 2026",
+  },
 
   
 ];
