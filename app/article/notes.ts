@@ -8,6 +8,15 @@ type NoteProps = {
 };
 
 export const notes: NoteProps[] = [
+{
+    text: `IAM Roles, Policies & Least Privilege Audit on AWS`,
+    slug: "/day-6-iam-roles-policies-least-privilege",
+    image: "/projectImages/AWSProject-01.png",
+    description:
+      "No deployed resources. Just pure security. Day 6 covers the IAM building blocks every AWS architect must master — users, groups, roles, policy evaluation order, the Policy Simulator, and the principle of least privilege.",
+    tags: ["AWS", "IAM", "Security"],
+    date: "June 06, 2026",
+  },
 
   {
     text: `Launch a Secure EC2 Web Server from Scratch`,

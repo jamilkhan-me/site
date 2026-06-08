@@ -7,6 +7,15 @@ type RecentArticleTypeProps = {
 };
 
 export const RecentArticles: RecentArticleTypeProps[] = [
+  {
+    text: `IAM Roles, Policies & Least Privilege Audit on AWS`,
+    slug: "/article/day-6-iam-roles-policies-least-privilege",
+    image: "/projectImages/AWSProject-01.png",
+    description:
+      "No deployed resources. Just pure security. Day 6 covers the IAM building blocks every AWS architect must master — users, groups, roles, policy evaluation order, the Policy Simulator, and the principle of least privilege.",
+    tags: ["AWS", "IAM", "Security"],
+   
+  },
    {
     text: `Launch a Secure EC2 Web Server from Scratch`,
     slug: "/article/aws-project-blog",
@@ -39,14 +48,6 @@ export const RecentArticles: RecentArticleTypeProps[] = [
       "Customise your McBook Terminal ana give it pro look.",
     tags: ["iTerm2", "Terminal",],
   
-  },
-  {
-    text: "Setting up MDX on Next.js 14",
-    slug: "/article/mdx-nextjs-14",
-    image: "/og/mdx-nextjs-14.png",
-    description:
-      "It's comically nontrivial to set up an ergonomic, performant MDX Next.js app, with all the bells & whistles like parsing YAML frontmatter. Here's how I did it.",
-    tags: ["guide", "engineering"],
   },
   {
     text: `Build a Serverless REST API with Lambda + API Gateway`,
