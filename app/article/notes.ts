@@ -8,10 +8,19 @@ type NoteProps = {
 };
 
 export const notes: NoteProps[] = [
+  {
+    text: `Auto Scaling Group Behind an ALB — Elastic Compute That Scales Itself`,
+    slug: "/day-7-auto-scaling-group-alb",
+    image: "/projectImages/AWSProjectArchitect-07.png",
+    description:
+      "What if your infrastructure grew with your traffic and shrank when it quieted down — automatically, without anyone touching a console? Day 7 builds exactly that: an ALB distributing traffic across an ASG that scales from 1 to 4 instances based on CPU load.",
+    tags: ["Auto Scaling", "ALB", "Load Balancer"],
+    date: "June 07, 2026",
+  },
 {
     text: `IAM Roles, Policies & Least Privilege Audit on AWS`,
     slug: "/day-6-iam-roles-policies-least-privilege",
-    image: "/projectImages/AWSProject-01.png",
+    image: "/projectImages/AWSProjectArchitect-06.png",
     description:
       "No deployed resources. Just pure security. Day 6 covers the IAM building blocks every AWS architect must master — users, groups, roles, policy evaluation order, the Policy Simulator, and the principle of least privilege.",
     tags: ["AWS", "IAM", "Security"],
