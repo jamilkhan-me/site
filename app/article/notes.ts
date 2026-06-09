@@ -8,6 +8,15 @@ type NoteProps = {
 };
 
 export const notes: NoteProps[] = [
+    {
+    text: `DynamoDB Serverless Todo App — When Key-Value Clicks`,
+    slug: "/day-8-dynamodb-serverless-todo-app",
+    image: "/projectImages/AWSProjectArchitect-08.png",
+    description:
+      "Four Lambda functions. One DynamoDB table. Full CRUD. No servers. Day 8 goes beyond the basics — UpdateExpression syntax, scan vs query, on-demand capacity, and the exact moment the NoSQL mental model stops feeling wrong.",
+    tags: ["DynamoDB", "Lambda", "Serverless"],
+    date: "June 08, 2026",
+  },
   {
     text: `Auto Scaling Group Behind an ALB — Elastic Compute That Scales Itself`,
     slug: "/day-7-auto-scaling-group-alb",
